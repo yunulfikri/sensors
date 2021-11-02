@@ -11,17 +11,17 @@
 
     <div class="row col-12">
         
-        <div class="col-6 px-3 border-left-primary">
+        <div class="px-3 col-6 border-left-primary">
             <form action="" method="get" class="form">
-                <input type="date" name="date" id="" class="form-control mb-2" value="{{ $dateStart->format('Y-m-d')}}">
+                <input type="date" name="date" id="" class="mb-2 form-control" value="{{ $dateStart->format('Y-m-d')}}">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
-        <div class="col-6 px-3 border-left-danger">
+        <div class="px-3 col-6 border-left-danger">
             <form action="" method="get" class="form">
-                <input type="date" name="date" id="" class="form-control mb-2" value="{{ $dateStart->format('Y-m-d')}}">
+                <input type="date" name="date" id="" class="mb-2 form-control" value="{{ $dateStart->format('Y-m-d')}}">
                 <label for="">To</label>
-                <input type="date" name="enddate" id="" class="form-control mb-2" value="{{ $dateEnd->format('Y-m-d')}}">
+                <input type="date" name="enddate" id="" class="mb-2 form-control" value="{{ $dateEnd->format('Y-m-d')}}">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>
@@ -31,31 +31,49 @@
 <hr>
 <div class="row">
 
-    <div class="col col-md-12">
+    <div class="col col-md-12 pt-5">
+        <div class="text-center">
+                Ket. <span style="background-color: green; color: green">--</span> hari 1 , <span style="background-color: blue; color: blue">--</span> hari 2, <span style="background-color: orange; color: orange">--</span> hari 3, <span style="background-color: red; color: red">--</span> hari 4, <span style="background-color: black; color: black">--</span> hari 5, <span style="background-color: violet; color: violet">--</span> hari 6, <span style="background-color: maroon; color: maroon">--</span> hari 7
+        </div>
         <canvas id="vocChart" height="280" width="600"></canvas>
     </div>
-    <div class="col col-md-12">
+    <div class="col col-md-12 pt-5">
+        <div class="text-center">
+                Ket. <span style="background-color: green; color: green">--</span> hari 1 , <span style="background-color: blue; color: blue">--</span> hari 2, <span style="background-color: orange; color: orange">--</span> hari 3, <span style="background-color: red; color: red">--</span> hari 4, <span style="background-color: black; color: black">--</span> hari 5, <span style="background-color: violet; color: violet">--</span> hari 6, <span style="background-color: maroon; color: maroon">--</span> hari 7
+        </div>
         <canvas id="vbebanChart" height="280" width="600"></canvas>
     </div>
-    <div class="col col-md-6">
+    <div class="col col-md-12 pt-5">
+        <div class="text-center">
+                Ket. <span style="background-color: green; color: green">--</span> hari 1 , <span style="background-color: blue; color: blue">--</span> hari 2, <span style="background-color: orange; color: orange">--</span> hari 3, <span style="background-color: red; color: red">--</span> hari 4, <span style="background-color: black; color: black">--</span> hari 5, <span style="background-color: violet; color: violet">--</span> hari 6, <span style="background-color: maroon; color: maroon">--</span> hari 7
+        </div>
         <canvas id="ibebanChart" height="280" width="600"></canvas>
     </div>
-    <div class="col col-md-6">
+    <div class="col col-md-12 pt-5">
+        <div class="text-center">
+                Ket. <span style="background-color: green; color: green">--</span> hari 1 , <span style="background-color: blue; color: blue">--</span> hari 2, <span style="background-color: orange; color: orange">--</span> hari 3, <span style="background-color: red; color: red">--</span> hari 4, <span style="background-color: black; color: black">--</span> hari 5, <span style="background-color: violet; color: violet">--</span> hari 6, <span style="background-color: maroon; color: maroon">--</span> hari 7
+        </div>
         <canvas id="suhuChart" height="280" width="600"></canvas>
     </div>
-    <div class="col col-md-6">
+    <div class="col col-md-12 pt-5">
+        <div class="text-center">
+                Ket. <span style="background-color: green; color: green">--</span> hari 1 , <span style="background-color: blue; color: blue">--</span> hari 2, <span style="background-color: orange; color: orange">--</span> hari 3, <span style="background-color: red; color: red">--</span> hari 4, <span style="background-color: black; color: black">--</span> hari 5, <span style="background-color: violet; color: violet">--</span> hari 6, <span style="background-color: maroon; color: maroon">--</span> hari 7
+        </div>
         <canvas id="irradiasiChart" height="280" width="600"></canvas>
     </div>
-    <div class="col col-md-6">
+    <div class="col col-md-12 pt-5">
+        <div class="text-center">
+                Ket. <span style="background-color: green; color: green">--</span> hari 1 , <span style="background-color: blue; color: blue">--</span> hari 2, <span style="background-color: orange; color: orange">--</span> hari 3, <span style="background-color: red; color: red">--</span> hari 4, <span style="background-color: black; color: black">--</span> hari 5, <span style="background-color: violet; color: violet">--</span> hari 6, <span style="background-color: maroon; color: maroon">--</span> hari 7
+        </div>
         <canvas id="dayaChart" height="280" width="600"></canvas>
     </div>
     
 
 </div>
-<div class="d-flex justify-content-center mt-5">
+<div class="mt-5 d-flex justify-content-center">
 
     <div class="card">
-        <div class="card-header h1 text-center">{{ __('Sensor Data') }}</div>
+        <div class="text-center card-header h1">{{ __('Sensor Data') }}</div>
 
         <div class="card-body">
             <div class="table-responsive">
@@ -120,6 +138,9 @@
     var suhu = <?php echo $suhu; ?>;
     var daya = <?php echo $daya; ?>;
     var irradiasi = <?php echo $irradiasi; ?>;
+    var warna = <?= $warna ?>;
+
+    console.log(warna);
      
     const optionsPlugins = {
         plugins: {
@@ -193,7 +214,6 @@
         }]
     };
 
-
     window.onload = function () {
         var ctvvoc = document.getElementById("vocChart").getContext("2d");
         window.myBar = new Chart(ctvvoc, {
@@ -216,21 +236,10 @@
                 },
                 responsive: true,
                 annotation: {
-                drawTime: 'afterDatasetsDraw',
-                annotations: [{
-                    type: 'line',
-                    mode: 'vertical',
-                    scaleID: 'x-axis-0',
-                    value: '17:00',
-                    borderColor: 'red',
-                    borderWidth: 1,
-                    label: {
-                    enabled: true,
-                    position: "top",
-                    }
-                }]
+                    drawTime: 'afterDatasetsDraw',
+                    annotations: warna,
                 }
-                }
+            }
             
         });
 
@@ -254,6 +263,10 @@
                     text: 'Vbeban (V) Chart'
                 },
                 responsive: true,
+                annotation: {
+                    drawTime: 'afterDatasetsDraw',
+                    annotations: warna,
+                }
             }
         });
 
@@ -277,6 +290,10 @@
                     text: 'Ibeban (A) Chart'
                 },
                 responsive: true,
+                annotation: {
+                    drawTime: 'afterDatasetsDraw',
+                    annotations: warna,
+                }
             }
         });
 
@@ -300,6 +317,10 @@
                     text: 'Suhu Chart'
                 },
                 responsive: true,
+                annotation: {
+                    drawTime: 'afterDatasetsDraw',
+                    annotations: warna,
+                }
                 
             }
         });
@@ -324,6 +345,10 @@
                     text: 'Daya Chart'
                 },
                 responsive: true,
+                annotation: {
+                    drawTime: 'afterDatasetsDraw',
+                    annotations: warna,
+                }
             }
         });
 
@@ -347,6 +372,10 @@
                     text: 'Irradiasi Chart'
                 },
                 responsive: true,
+                annotation: {
+                    drawTime: 'afterDatasetsDraw',
+                    annotations: warna,
+                }
             }
         });
 

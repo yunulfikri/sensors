@@ -105,8 +105,45 @@ class HomeController extends Controller
 
             }
 
-            // return $ibebanData;
-            return view('dashboard2', [
+
+            $warna = [
+                ['green'],
+                ["blue"],
+                ["orange"],
+                ["red"],
+                ["black"],
+                ["violet"],
+                ["maroon"]
+            ];
+
+            $annotation = [];
+
+            $number = 0;
+            $day = 1;
+
+            $tempTimeCurrent = [];
+            
+            for ($i=8; $i <= count($time); $i+=9) {
+                array_push($tempTimeCurrent, $time[$i]);
+            }
+
+            foreach ($tempTimeCurrent as $key) {
+                $test = [
+                    "type" => 'line',
+                    "mode" => 'vertical',
+                    "scaleID" => 'x-axis-0',
+                    "value" => $key,
+                    "borderColor" => $warna[$number++],
+                    "borderWidth" => 2,
+                    "label" => [
+                        "enabled" => true,
+                        // "content" => $hari, 
+                        "position" => 'top',
+                    ]
+                ];
+                array_push($annotation, $test);
+            }
+            return view('dashboard', [
                 'time' => json_encode($time,JSON_NUMERIC_CHECK),
                 'timefull' => json_encode($timefull,JSON_NUMERIC_CHECK), 
                 'voc' =>json_encode($vocData,JSON_NUMERIC_CHECK),
@@ -118,7 +155,8 @@ class HomeController extends Controller
                 'kelembaban' => json_encode($kelembabanData,JSON_NUMERIC_CHECK),
                 'data' => $data,
                 'dateStart' => $start,
-                'dateEnd' => $end->subDay(1)
+                'dateEnd' => $end->subDay(1),
+                'warna' => json_encode($annotation),
             ]);
             
        
